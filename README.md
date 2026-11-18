@@ -275,6 +275,14 @@ If you need commercial support, please contact [Traefik.io](https://traefik.io) 
 ./traefik --configFile=traefik.toml
 ```
 
+- Ou use a imagem Docker oficial pré-construída com suporte multi-arquitetura (`linux/amd64` e `linux/arm64`):
+
+```shell
+docker run -d -p 8080:8080 -p 80:80 -p 443:443/tcp -p 443:443/udp \
+  -v $PWD/traefik.yml:/etc/traefik/traefik.yml \
+  tmsoftbrasil/traefik:latest
+```
+
 - Or use the official tiny Docker image and run it with the [sample configuration file](https://raw.githubusercontent.com/traefik/traefik/master/traefik.sample.toml):
 
 ```shell
