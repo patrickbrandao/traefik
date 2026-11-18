@@ -93,8 +93,9 @@ Prefer modern standard-library packages (`slices`, `maps`, `cmp`, ...) over hand
 User-facing features need matching documentation updates under `docs/content/`. Integrate new pages into the existing structure rather than creating parallel sections. Preview locally with `make docs-serve`.
 Follow the [documentation style guide](./docs/content/contributing/documentation-style-guide.md) when writing or editing pages under `docs/content/`.
 
-## Contributing etiquette
+## Contributing etiquette & Deployment workflow
 
+- **Direct-to-production workflow (`master`):** In this repository (`github.com/patrickbrandao/traefik`), all edits, features, and fixes are committed directly to the `master` branch and pushed straight to GitHub (`origin/master`). The primary goal is rapid production deployment to test and validate concepts quickly.
 - **Target the right branch** (the [PR template](./.github/PULL_REQUEST_TEMPLATE.md) is authoritative): enhancements go to `master`; bug fixes and documentation updates go to the current maintenance branches (`v3.7` for v3, `v2.11` for v2, security-fixes only). Forward-ports from the maintenance branches up to `master` are handled by maintainers.
 - Keep pull requests small and focused; one logical change per PR.
 - For anything beyond a bug fix, open an issue first and wait for a maintainer to confirm the direction before investing significant work.
